@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="./js/scripts.js" async></script> 
+</head>
+<body>
+<!--
+  Parcial Template => https://github.com/codingmarket07/Resume-CV-Design-N19
+-->
+<div class="resume_menu">
+  <ul>
+    <li id="home" class="bold">
+      Home
+    </li>
+    <li id="details" class="bold">
+      Details
+    </li>
+    <li id="work_experience" class="bold">
+      Work Experience
+    </li>
+    <li id="education" class="bold">
+      Education
+    </li>
+    <li id="login" class="bold">
+      Login
+    </li>
+    <li id="close" class="bold">
+      <!--&#9587-->
+      &times;
+    </li>
+  </ul>
+</div>
+<div class="resume_burger">
+  <div class="burger_div">
+    <ul>
+      <li id="burger_button" class="bold">
+        &#9776
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- From https://www.w3schools.com/howto/howto_css_login_form.asp -->
+<div id="login_form" class="modal">
+  
+  <form class="modal-content animate" method="post">
+    <div class="imgcontainer">
+      <span class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button id="login_submit" type="button">Login</button>
+      <span id="sorry">Sorry, you can't log in, you still need to learn backend!</span><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container btn_container">
+      <button type="button" class="refresh_btn">Refresh user data</button>
+      <span class="psw">Forgot <a id="forgot">password?</a></span>
+    </div>
+  </form>
+</div>
+<!-- End From -->
+<div class="resume">
+  <div class="resume_left">
+     <div class="resume_profile">
+       <img id="picture" src="" alt="Profile Picture">
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+           <p id="name" class="bold">stephen colbert</p>
+           <p id="profession" class="regular">Designer</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+             <div class="data">
+               <span id="address">21 Street, Texas</span>  <br /> <span id="country">USA</span>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+             <div id="cell" class="data">
+               +324 4445678
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+             <div id="email" class="data">
+               stephen@gmail.com
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-weebly"></i>
+             </div>
+             <div id="website" class="data">
+               www.example.com
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_details">
+         <div class="title">
+           <p class="bold">Personal Details</p>
+         </div>
+         <ul>
+           <li>
+             <div class="detail_name">
+               City
+             </div>
+             <div class="detail_progress">
+               <span id="city"></span>
+             </div>
+           </li>
+           <li>
+             <div class="detail_name">
+               State
+             </div>
+             <div class="detail_progress">
+               <span id="state"></span>
+             </div>
+           </li>
+           <li>
+            <div class="detail_name">
+              Post Code
+            </div>
+            <div class="detail_progress">
+              <span id="postcode"></span>
+            </div>
+          </li>
+          <li>
+             <div class="detail_name">
+               ID
+             </div>
+             <div class="detail_progress">
+               <span id="dni"></span>
+             </div>
+           </li>
+           <li>
+             <div class="detail_name">
+               Gender
+             </div>
+             <div class="detail_progress">
+               <span id="gender" ></span>
+             </div>
+           </li>
+           <li>
+             <div class="detail_name">
+               Birth Date
+             </div>
+             <div class="detail_progress">
+               <span id="dob"></span>
+             </div>
+           </li>
+           <li>
+            <div class="detail_name">
+              Age
+            </div>
+            <div class="detail_progress">
+              <span id="age"></span>
+            </div>
+          </li>
+        </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fab fa-facebook-square"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Facebook</p>
+               <a id="facebook_url" href="https://www.facebook.com/Stephen"><p id="facebook">Stephen@facebook</p></a>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-twitter-square"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Twitter</p>
+               <a id="twitter_url" href="https://www.twitter.com/Stephen"><p id="twitter">Stephen@twitter</p></a>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-youtube"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Youtube</p>
+               <a id="youtube_url" href="https://www.youtube.com/Stephen"><p id="youtube">Stephen@youtube</p></a>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <a id="linkedin_url" href="https://www.linkedin.com/in/Stephen"><p id="linkedin">Stephen@linkedin</p></a>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About us</p>
+         </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+        <ul>
+            <li>
+                <div class="date">2013 - 2015</div> 
+                <div class="info">
+                     <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">2015 - 2017</div>
+              <div class="info">
+                     <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">2017 - Present</div>
+              <div class="info">
+                     <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+      <ul>
+            <li>
+                <div class="date">2010 - 2013</div> 
+                <div class="info">
+                     <p class="semi-bold">Web Designing (Texas University)</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">2000 - 2010</div>
+              <div class="info">
+                     <p class="semi-bold">Texas International School</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_hobby">
+      <div class="title">
+           <p class="bold">Hobby</p>
+         </div>
+       <ul>
+         <li><i class="fas fa-book"></i></li>
+         <li><i class="fas fa-gamepad"></i></li>
+         <li><i class="fas fa-music"></i></li>
+         <li><i class="fab fa-pagelines"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
