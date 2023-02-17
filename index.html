@@ -8,13 +8,16 @@
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   <script src="./js/scripts.js" async></script>
+  <!-- google fonts is imported in the CSS file -->
 </head>
 
 <body>
+  <!-- Comment may be moved to the backend template for hidding-->
   <!--
   Parcial Template => https://github.com/codingmarket07/Resume-CV-Design-N19
 -->
-  <div class="resume_menu"> <!-- semantics correction // aware for errors // div to menu-->
+  <!-- menu -->
+  <div class="resume_menu"> 
     <ul>
       <li id="home" class="bold">
         Home
@@ -37,6 +40,8 @@
       </li>
     </ul>
   </div>
+  <!-- /menu -->
+  <!-- burger button -->
   <div class="resume_burger">
     <div class="burger_div">
       <ul>
@@ -46,7 +51,10 @@
       </ul>
     </div>
   </div>
+  <!-- /burger button -->
+  <!-- main -->
   <main class="resume">
+    <!-- pop-up login-->
     <!-- From https://www.w3schools.com/howto/howto_css_login_form.asp -->
     <div id="login_form" class="modal">
       <form class="modal-content animate" method="post">
@@ -72,16 +80,25 @@
       </form>
     </div>
     <!-- /From -->
-    <section class="resume_left"> <!-- Tutor suggested I use the section tag, though => https://html.spec.whatwg.org/multipage/sections.html#use-div-for-wrappers -->
+    <!-- /pop-up login-->
+    <!-- left panel -->
+    <div class="resume_left">
+      <!--image -->
       <div class="resume_profile">
         <img id="picture" src="./img/profile.png" alt="Profile Picture">
       </div>
+      <!--/image -->
+      <!-- resume content -->
       <div class="resume_content">
+        <!-- resume info -->
         <div class="resume_item resume_info">
+          <!-- user name -->
           <div class="title">
             <p id="name" class="bold">stephen colbert</p>
             <p id="profession" class="regular">Designer</p>
           </div>
+          <!-- /user name -->
+          <!-- user details -->
           <ul>
             <li>
               <div class="icon">
@@ -116,7 +133,10 @@
               </div>
             </li>
           </ul>
+          <!-- /user details -->
         </div>
+        <!-- /resume info -->
+        <!-- user details (hidden) -->
         <div class="resume_item resume_details">
           <div class="title">
             <p class="bold">Personal Details</p>
@@ -180,6 +200,8 @@
             </li>
           </ul>
         </div>
+        <!-- /user details (hidden) -->
+        <!-- user socials -->
         <div class="resume_item resume_social">
           <div class="title">
             <p class="bold">Social</p>
@@ -231,9 +253,14 @@
             </li>
           </ul>
         </div>
+        <!-- /user socials -->
       </div>
-    </section>
-    <section class="resume_right">
+      <!-- /resume content -->
+    </div>
+    <!-- /left panel -->
+    <!-- right panel -->
+    <div class="resume_right">
+      <!-- about -->
       <div class="resume_item resume_about">
         <div class="title">
           <p class="bold">About us</p>
@@ -241,12 +268,14 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa
           officia totam atque exercitationem inventore repudiandae?</p>
       </div>
+      <!-- /about -->
+      <!-- work experience -->
       <div class="resume_item resume_work">
         <div class="title">
-          <p class="bold">Work Experience</p>
+          <p class="bold">Work Experience</p><!-- h3 could be used here but css takes care of it so it's poinless-->
         </div>
         <ul>
-          <li>
+          <li><!-- "article" tag could be used here but "li" tag does the job, don't want to flood the html or the code when editing -->
             <div class="date">2013 - 2015</div>
             <div class="info">
               <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
@@ -269,12 +298,14 @@
           </li>
         </ul>
       </div>
+      <!-- more can be added via backend -->
+      <!-- work experience -->
       <div class="resume_item resume_education">
         <div class="title">
-          <p class="bold">Education</p>
+          <p class="bold">Education</p><!-- h3 could be used here but css takes care of it -->
         </div>
         <ul>
-          <li>
+          <li><!-- "article" tag could be used here but "li" tag does the job -->
             <div class="date">2010 - 2013</div>
             <div class="info">
               <p class="semi-bold">Web Designing (Texas University)</p>
@@ -290,6 +321,8 @@
           </li>
         </ul>
       </div>
+      <!-- /work experience -->
+      <!-- hobbies -->
       <div class="resume_item resume_hobby">
         <div class="title">
           <p class="bold">Hobby</p>
@@ -301,10 +334,13 @@
           <li><i class="fab fa-pagelines"></i></li>
         </ul>
       </div>
-    </section>
+      <!-- hobbies -->
+    </div>
+    <!-- right panel -->
   </main>
   <footer>
     <p>Author: Carlos Ressia for Argentina Programa 4.0</p>
+    <!-- language selector should be placed here but it's preferable do it so with backend template support-->
   </footer>
   <!-- semantics correction // aware for errors // add footer // add css for footer  -->
 </body>
