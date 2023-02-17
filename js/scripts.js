@@ -169,19 +169,27 @@ document.getElementById('forgot').onclick = function (){
 }
 // aux functions
 function submit_form(link) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    // is any field empty?
+    let uname = document.getElementById('uname').value;
+    let psw = document.getElementById('psw').value;
+    if(uname == "" || psw == ""){
+        document.getElementById('fill').style.display = "block";
+    }
+    else{
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
         if (this.readyState == 4){
-            if (this.status == 200) {
-            // you're logged in you can edit your resume
-            }
-            if (this.status >= 404) {
-                document.getElementById('sorry').style.display = "block";
-            }
+          if (this.status == 200) {
+           // you're logged in you can edit your resume
+          }
+          if (this.status >= 404) {
+            document.getElementById('sorry').style.display = "block";
+          }
         }
-    };
-    xhttp.open("POST", link, true);
-    xhttp.send();
+      };
+      xhttp.open("POST", link, true);
+      xhttp.send();
+    }
 }
 function showMeThisClass(classArray, showClass, expandClass="right"){ // (classArray = hides classes, showClass = duh, expandClass = set width to 900px)
     for(let r in classArray){

@@ -54,13 +54,14 @@
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
         
       <button id="login_submit" type="button">Login</button>
       <span id="sorry">Sorry, you can't log in, you still need to learn backend!</span><br>
+      <span id="fill">Sorry, you need to fill all the fields</span><br>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
