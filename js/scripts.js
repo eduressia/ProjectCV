@@ -175,7 +175,7 @@ function submit_form(link) {
             if (this.status == 200) {
             // you're logged in you can edit your resume
             }
-            else{
+            if (this.status >= 404) {
                 document.getElementById('sorry').style.display = "block";
             }
         }
