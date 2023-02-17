@@ -295,7 +295,7 @@ body {
   display: none;
 }
 /* begin login snippet */
-#sorry{
+#sorry, #fill{
   color: red;
   text-align: center;
   display: none;
