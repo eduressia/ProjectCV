@@ -176,6 +176,7 @@ function submit_form(link) {
         document.getElementById('fill').style.display = "block";
     }
     else{
+      document.getElementById('fill').style.display = "none";
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4){
