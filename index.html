@@ -14,7 +14,7 @@
   <!--
   Parcial Template => https://github.com/codingmarket07/Resume-CV-Design-N19
 -->
-  <div class="resume_menu"> <!-- semantics correction // aware for mistakes // div to menu-->
+  <menu class="resume_menu"> <!-- semantics correction // aware for errors // div to menu-->
     <ul>
       <li id="home" class="bold">
         Home
@@ -36,7 +36,7 @@
         &times;
       </li>
     </ul>
-  </div>
+  </menu>
   <div class="resume_burger">
     <div class="burger_div">
       <ul>
@@ -46,34 +46,34 @@
       </ul>
     </div>
   </div>
-  <!-- From https://www.w3schools.com/howto/howto_css_login_form.asp -->
-  <div id="login_form" class="modal">
-    <form class="modal-content animate" method="post">
-      <div class="imgcontainer">
-        <span class="close" title="Close Modal">&times;</span>
-      </div>
-      <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><b>Password</b></label>
-        <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
-        <button id="login_submit" type="button">Login</button>
-        <span id="sorry">Sorry, you can't log in, you still need to learn backend!</span><br>
-        <span id="fill">Sorry, you need to fill all the fields</span><br>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-      </div>
-      <div class="container btn_container">
-        <button type="button" class="refresh_btn">Refresh user data</button>
-        <span class="psw">Forgot <a id="forgot">password?</a></span>
-      </div>
-    </form>
-  </div>
-  <!-- /From -->
-  <div class="resume"> <!-- semantics correction // aware for mistakes // div to main -->
-    <div class="resume_left"> <!-- semantics correction // aware for mistakes // div to section -->
-      <div class="resume_profile">
+  <main class="resume"> <!-- semantics correction // aware for errors // div to main -->
+    <!-- From https://www.w3schools.com/howto/howto_css_login_form.asp -->
+    <section id="login_form" class="modal"><!-- semantics correction // aware for errors // div to section  -->
+      <form class="modal-content animate" method="post">
+        <div class="imgcontainer">
+          <span class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+          <button id="login_submit" type="button">Login</button>
+          <span id="sorry">Sorry, you can't log in, you still need to learn backend!</span><br>
+          <span id="fill">Sorry, you need to fill all the fields</span><br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container btn_container">
+          <button type="button" class="refresh_btn">Refresh user data</button>
+          <span class="psw">Forgot <a id="forgot">password?</a></span>
+        </div>
+      </form>
+    </section>
+    <!-- /From -->
+    <section class="resume_left"> <!-- semantics correction // aware for errors // div to section -->
+      <div class="resume_profile"> <!-- semantics correction // aware for errors // div to article -->
         <img id="picture" src="" alt="Profile Picture">
       </div>
       <div class="resume_content">
@@ -232,16 +232,16 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="resume_right"><!-- semantics correction // aware for mistakes // div to section  -->
-      <div class="resume_item resume_about">
+    </section>
+    <section class="resume_right"><!-- semantics correction // aware for errors // div to section  -->
+      <div class="resume_item resume_about"><!-- semantics correction // aware for errors // div to article  -->
         <div class="title">
           <p class="bold">About us</p>
         </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa
           officia totam atque exercitationem inventore repudiandae?</p>
       </div>
-      <div class="resume_item resume_work"><!-- semantics correction // aware for mistakes // div to section  -->
+      <div class="resume_item resume_work"><!-- semantics correction // aware for errors // div to article  -->
         <div class="title">
           <p class="bold">Work Experience</p>
         </div>
@@ -269,7 +269,7 @@
           </li>
         </ul>
       </div>
-      <div class="resume_item resume_education"><!-- semantics correction // aware for mistakes // div to section  -->
+      <div class="resume_item resume_education"><!-- semantics correction // aware for errors // div to article  -->
         <div class="title">
           <p class="bold">Education</p>
         </div>
@@ -290,7 +290,7 @@
           </li>
         </ul>
       </div>
-      <div class="resume_item resume_hobby"><!-- semantics correction // aware for mistakes // div to section  -->
+      <div class="resume_item resume_hobby"><!-- semantics correction // aware for errors // div to article  -->
         <div class="title">
           <p class="bold">Hobby</p>
         </div>
@@ -301,9 +301,9 @@
           <li><i class="fab fa-pagelines"></i></li>
         </ul>
       </div>
-    </div>
-  </div>
-  <!-- semantics correction // aware for mistakes // add footer // add css for footer  -->
+    </section>
+  </main>
+  <!-- semantics correction // aware for errors // add footer // add css for footer  -->
 </body>
 
 </html>
