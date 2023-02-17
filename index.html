@@ -46,9 +46,9 @@
       </ul>
     </div>
   </div>
-  <main class="resume"> <!-- semantics correction // aware for errors // div to main -->
+  <main class="resume">
     <!-- From https://www.w3schools.com/howto/howto_css_login_form.asp -->
-    <section id="login_form" class="modal"><!-- semantics correction // aware for errors // div to section  -->
+    <div id="login_form" class="modal">
       <form class="modal-content animate" method="post">
         <div class="imgcontainer">
           <span class="close" title="Close Modal">&times;</span>
@@ -70,11 +70,11 @@
           <span class="psw">Forgot <a id="forgot">password?</a></span>
         </div>
       </form>
-    </section>
+    </div>
     <!-- /From -->
-    <section class="resume_left"> <!-- semantics correction // aware for errors // div to section -->
-      <div class="resume_profile"> <!-- semantics correction // aware for errors // div to article -->
-        <img id="picture" src="" alt="Profile Picture">
+    <section class="resume_left"> <!-- Tutor suggested I use the section tag, though => https://html.spec.whatwg.org/multipage/sections.html#use-div-for-wrappers -->
+      <div class="resume_profile">
+        <img id="picture" src="./img/profile.png" alt="Profile Picture">
       </div>
       <div class="resume_content">
         <div class="resume_item resume_info">
@@ -233,15 +233,15 @@
         </div>
       </div>
     </section>
-    <section class="resume_right"><!-- semantics correction // aware for errors // div to section  -->
-      <div class="resume_item resume_about"><!-- semantics correction // aware for errors // div to article  -->
+    <section class="resume_right">
+      <div class="resume_item resume_about">
         <div class="title">
           <p class="bold">About us</p>
         </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa
           officia totam atque exercitationem inventore repudiandae?</p>
       </div>
-      <div class="resume_item resume_work"><!-- semantics correction // aware for errors // div to article  -->
+      <div class="resume_item resume_work">
         <div class="title">
           <p class="bold">Work Experience</p>
         </div>
@@ -269,7 +269,7 @@
           </li>
         </ul>
       </div>
-      <div class="resume_item resume_education"><!-- semantics correction // aware for errors // div to article  -->
+      <div class="resume_item resume_education">
         <div class="title">
           <p class="bold">Education</p>
         </div>
@@ -290,7 +290,7 @@
           </li>
         </ul>
       </div>
-      <div class="resume_item resume_hobby"><!-- semantics correction // aware for errors // div to article  -->
+      <div class="resume_item resume_hobby">
         <div class="title">
           <p class="bold">Hobby</p>
         </div>
@@ -303,7 +303,9 @@
       </div>
     </section>
   </main>
+  <footer>
+    <p>Author: Carlos Ressia for Argentina Programa 4.0</p>
+  </footer>
   <!-- semantics correction // aware for errors // add footer // add css for footer  -->
 </body>
-
 </html>
