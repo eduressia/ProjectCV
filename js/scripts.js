@@ -1,6 +1,6 @@
 //console.log("localStorage.user: " + JSON.stringify(localStorage.user);
 if (localStorage.getItem("user") === null){ //check if localStorage is null object //from https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists
-    console.log("There is no \"user\" in localStorage");
+    // console.log("There is no \"user\" in localStorage");
     //fetch api data
     getRandomProfile();
     //print User data into html (userObj) (function)
