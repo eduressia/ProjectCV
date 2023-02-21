@@ -183,7 +183,7 @@ function submit_form(link) {
           if (this.status == 200) {
            // you're logged in you can edit your resume
           }
-          if (this.status >= 404) {
+          if (this.status >= 404) { // has to be >= 404 because github gives 405 error instead of 404 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
             document.getElementById('sorry').style.display = "block";
           }
         }
@@ -192,7 +192,7 @@ function submit_form(link) {
       xhttp.send();
     }
 }
-function showMeThisClass(classArray, showClass, expandClass="right"){ // (classArray = hides classes, showClass = duh, expandClass = set width to 900px)
+function showMeThisClass(classArray, showClass, expandClass="right"){ // (classArray = hides classes, showClass = class to show, expandClass = set width to 900px)
     for(let r in classArray){
         document.getElementsByClassName("resume_"+ classArray[r])[0].style.display = "none";
     }
