@@ -183,7 +183,7 @@ function submit_form(link) {
           if (this.status == 200) {
            // you're logged in you can edit your resume
           }
-          if (this.status >= 404) { // has to be >= 404 because github gives 405 error instead of 404 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
+          if (this.status >= 404) { // has to be >= 404 because github pages gives 405 error instead of 404 https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
             document.getElementById('sorry').style.display = "block";
           }
         }
