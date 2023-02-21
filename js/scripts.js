@@ -198,7 +198,7 @@ function showMeThisClass(classArray, showClass, expandClass="right"){ // (classA
     }
     document.getElementsByClassName("resume_" + expandClass)[0].style.width = "900px";
     document.getElementsByClassName("resume_"+ showClass)[0].style.display = ""; //
-    document.getElementsByClassName("resume_"+ expandClass)[0].style.display = ""; // redundant?
+    document.getElementsByClassName("resume_"+ expandClass)[0].style.display = ""; // redundant? Maybe, but in some cases necesary
     if(showClass === "menu"){
         document.getElementsByClassName("resume_"+ showClass)[0].style.display = "flex"; // for some reason "style.display = "";" doesn't work on "display:none;" from external stylesheet
     }
