@@ -1,9 +1,10 @@
 # eduressia.github.io
-Argentina Programa 4.0 CV
-Proyecto Curriculum vitae para Argentina Programa 4.0 Etapa 1
-Si bien el curso es en español he optado por hacerlo en su totalidad en inglés para hacerlo mas profesional y legible para un programador (para mi al menos es abrumador leer código que está basado en inglés y leer comentarios en otro idioma)
-También se sugirió crear una hoja que "escriba toda la información que quiera incluir en el CV, para poder empezar a pensar en qué estructura se le dará al proyecto"
-Debido a que no me siento cómodo con esa iniciativa he optado en hacerlo a la inversa, primero hacer el programa y darle forma para luego hacer dicha hoja que sería esta misma
+<br />
+Argentina Programa 4.0 CV<br />
+Proyecto Curriculum vitae para Argentina Programa 4.0 Etapa 1<br />
+Si bien el curso es en español he optado por hacerlo en su totalidad en inglés para hacerlo mas profesional y legible para un programador (para mi al menos es abrumador leer código que está basado en inglés y leer comentarios en otro idioma).<br />
+También se sugirió crear una hoja que "escriba toda la información que quiera incluir en el CV, para poder empezar a pensar en qué estructura se le dará al proyecto".<br />
+Debido a que no me siento cómodo con esa iniciativa he optado en hacerlo a la inversa, primero hacer el programa y darle forma para luego hacer dicha hoja que sería esta misma.<br />
 Muchos programadores caen en la trampa de ponerse a pensar como hacer "el dibujo" de su página web para luego empezar de cero una y otra vez
 Por eso yo trabajo en el sentido contrario, primero creo funciones y/o clases que puedan ser adaptables a cualquier formato para al final dedicarle tiempo al formato definitivo que quiera yo o el cliente con la menor cantidad de modificaciones al código de JS
 Sería algo asi como crear un "Framework" (si esa es la palabra correcta) o un CMS (Content Management System) como blogger o un phpBB (Forum Software)
