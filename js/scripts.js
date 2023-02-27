@@ -139,10 +139,10 @@ window.onclick = function(event) {
     if (event.target == work_exp) {
         showMeThisClass(classArrayWork, "work", "right");
     }
-    elseif(event.target == educ){
+    else if(event.target == educ){
         showMeThisClass(classArrayEducation, "education", "right");
     }
-    elseif(event.target == details){
+    else if(event.target == details){
         showMeThisClass(classArrayDetails, "left", "left");
     }
 }// refresh the page
