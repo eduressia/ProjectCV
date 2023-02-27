@@ -25,3 +25,5 @@ Es decir:<br />
 14.- También se pensó poner un "select" para alternar el idioma de los títulos del menú y los segmentos del documento pero se desechó la idea porque para eso sería ideal hacerlo en Backend con el soporte de plantillas ocultas y tal vez una base de datos (insisto, no vale la pena agregar decenas de líneas de código para demostrar que se aprendió lo ya demostrado menos cuando es algo que en el 99.99% de los casos se maneja en backend con o sin ayuda de Ajax).<br />
 15.- Finalmente crear este archivo readme que detalle los pasos mas importantes en el desarrollo del proyecto al mejor estilo "copete" de una nota televisiva que describe la nota a continuación pero se graba al final de la nota.<br />
 16.- Lo siento, soy técnico (electromecánico), primero junto las herramientas y recién después reviso la máquina XD.<br />
+<br />
+Visite el deployment del proyecto en <a href="https://eduressia.github.io/" target="_blank">https://eduressia.github.io/</a><br />
