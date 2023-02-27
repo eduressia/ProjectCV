@@ -26,4 +26,4 @@ Es decir:<br />
 15.- Finalmente crear este archivo readme que detalle los pasos mas importantes en el desarrollo del proyecto al mejor estilo "copete" de una nota televisiva que describe la nota a continuación pero se graba al final de la nota.<br />
 16.- Lo siento, soy técnico (electromecánico), primero junto las herramientas y recién después reviso la máquina XD.<br />
 <br />
-Visite el deployment del proyecto en <a href="https://eduressia.github.io/" target="_blank">https://eduressia.github.io/</a><br />
+Visite el deployment del proyecto en <a href="https://eduressia.github.io/">https://eduressia.github.io/</a><br />
