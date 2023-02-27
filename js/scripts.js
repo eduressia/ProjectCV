@@ -107,81 +107,40 @@ function setUserData(newUserData) {
         }
     }
 }
-//anonymous Functions didn't work moved to window.onclick
+//anonymous functions (document.getElementById('work_experience').onclick = function(){...}) gives null comming from external link, moved to window.onclick
 // hide everything inside classArray...
 let classArrayWork = ["left", "about", "education", "hobby"];
 let classArrayEducation = ["left", "about", "work", "hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
-//document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.onclick
-//    showMeThisClass(classArrayWork, "work", "right"); 
-//}
+// Hides everything but
 let work_exp = document.getElementById('work_experience');
-// hide everything but education
-//document.getElementById('education').onclick = function (){
-//    showMeThisClass(classArrayEducation, "education", "right");
-//}
 let educ = document.getElementById('education');
-// hide everything but details
-//document.getElementById('details').onclick = function(){
-//    showMeThisClass(classArrayDetails, "left", "left");
-//}
 let details = document.getElementById('details');
-// refresh the page
-//document.getElementById('home').onclick = function (){
-//    window.location.reload();
-//}
+// /Hides everything but
 let my_home = document.getElementById('home');
 // Refresh (clear localStorage)
-//document.getElementsByClassName('refresh_btn')[0].onclick = function (){
-//    localStorage.clear();
-//    window.location.reload();
-//}
 let refresh_me = document.getElementsByClassName('refresh_btn')[0];
 // login -> pops up login form
-//document.getElementById('login').onclick = function (){
-//    document.getElementById('login_form').style.display='block';
-//}
 let login_me = document.getElementById('login');
-
 // close modal
 let close_modal = document.getElementsByClassName('close')[0];
-//document.getElementsByClassName('close')[0].onclick = function (){
-//    document.getElementById('login_form').style.display='none';
-//    document.getElementById('sorry').style.display='none';
-//}
-
 // burger
 let my_burger = document.getElementById('burger_button');
-//document.getElementById('burger_button').onclick = function (){
-//    showMeThisClass(classArrayburger, "menu", "menu");
-//}
 // close menu
 let close_menu = document.getElementById('close');
-//document.getElementById('close').onclick = function (){
-//    showMeThisClass(["menu"], "burger", "burger");
-//}
 // submit form
 let submit_my_form = document.getElementById('login_submit');
-//document.getElementById('login_submit').onclick = function (){
-//    submit_form("submit.php");
-//}
 // forgot pasword
 let forgot_pwd = document.getElementById('forgot');
-//document.getElementById('forgot').onclick = function (){
-//    submit_form("forgot.php");
-//}
-
 // Get the modal
-var modal = document.getElementById('login_form');
+let modal = document.getElementById('login_form');
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
         modal.style.display = "none";
         document.getElementById('sorry').style.display = 'none';
     }
-    // Hides everything but
     if (event.target == work_exp) {
         showMeThisClass(classArrayWork, "work", "right");
     }
