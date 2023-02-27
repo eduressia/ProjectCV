@@ -107,13 +107,13 @@ function setUserData(newUserData){
         }
     }
 }
-//anonymous Functions
+//anonymous Functions didn't work moved to window.onclick
 // hide everything inside classArray...
 let classArrayWork = ["left","about","education","hobby"];
 let classArrayEducation = ["left","about","work","hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
-//document.getElementById('work_experience').onclick = function(){ //null comming from external link, moved to window.onclick
+//document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.onclick
 //    showMeThisClass(classArrayWork, "work", "right"); 
 //}
 let work_exp = document.getElementById('work_experience');
@@ -177,46 +177,86 @@ var modal = document.getElementById('login_form');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.getElementById('sorry').style.display='none';
+    switch(event.target){
+        case modal:
+            document.getElementById('sorry').style.display='none';
+        break;
+        case work_exp:
+            showMeThisClass(classArrayWork, "work", "right");
+        break;
+        case educ:
+            showMeThisClass(classArrayEducation, "education", "right");
+        break;
+        case details:
+            showMeThisClass(classArrayDetails, "left", "left");
+        break;
+        case my_home:
+            window.location.reload();
+        break;
+        case refresh_me:
+            localStorage.clear();
+            window.location.reload();
+        break;
+        case login_me:
+            document.getElementById('login_form').style.display='block';
+        break;
+        case close_modal:
+            document.getElementById('login_form').style.display='none';
+            document.getElementById('sorry').style.display='none';
+        break;
+        case my_burger:
+           showMeThisClass(classArrayburger, "menu", "menu");
+        break;
+        case close_menu:
+            showMeThisClass(["menu"], "burger", "burger");
+        break;
+        case submit_my_form:
+            submit_form("submit.php");
+        break;
+        case forgot_pwd:
+            submit_form("forgot.php");
+        break;
     }
-    // Hides everything but
-    if (event.target == work_exp) {
-        showMeThisClass(classArrayWork, "work", "right");
-    }
-    else if(event.target == educ){
-        showMeThisClass(classArrayEducation, "education", "right");
-    }
-    else if(event.target == details){
-        showMeThisClass(classArrayDetails, "left", "left");
-    }
-    else if(event.target == my_home){
-        window.location.reload();    
-    }
-    else if(event.target == refresh_me){
-        localStorage.clear();
-        window.location.reload();
-    }
-    else if(event.target == login_me){
-        document.getElementById('login_form').style.display='block';
-    }    
-    else if(event.target == close_modal){
-        document.getElementById('login_form').style.display='none';
-        document.getElementById('sorry').style.display='none';
-    }    
-    else if(event.target == my_burger){
-        showMeThisClass(classArrayburger, "menu", "menu");
-    }
-    else if(event.target == close_menu){
-        showMeThisClass(["menu"], "burger", "burger");
-    }
-    else if(event.target == submit_my_form){
-        submit_form("submit.php");
-    }
-    else if(event.target == forgot_pwd){
-        submit_form("forgot.php");
-    }
+    // if (event.target == modal) {
+    //     modal.style.display = "none";
+    //     document.getElementById('sorry').style.display='none';
+    // }
+    // // Hides everything but
+    // if (event.target == work_exp) {
+    //     showMeThisClass(classArrayWork, "work", "right");
+    // }
+    // else if(event.target == educ){
+    //     showMeThisClass(classArrayEducation, "education", "right");
+    // }
+    // else if(event.target == details){
+    //     showMeThisClass(classArrayDetails, "left", "left");
+    // }
+    // else if(event.target == my_home){
+    //     window.location.reload();    
+    // }
+    // else if(event.target == refresh_me){
+    //     localStorage.clear();
+    //     window.location.reload();
+    // }
+    // else if(event.target == login_me){
+    //     document.getElementById('login_form').style.display='block';
+    // }    
+    // else if(event.target == close_modal){
+    //     document.getElementById('login_form').style.display='none';
+    //     document.getElementById('sorry').style.display='none';
+    // }    
+    // else if(event.target == my_burger){
+    //     showMeThisClass(classArrayburger, "menu", "menu");
+    // }
+    // else if(event.target == close_menu){
+    //     showMeThisClass(["menu"], "burger", "burger");
+    // }
+    // else if(event.target == submit_my_form){
+    //     submit_form("submit.php");
+    // }
+    // else if(event.target == forgot_pwd){
+    //     submit_form("forgot.php");
+    // }
 }
 // aux functions
 function submit_form(link) {
