@@ -145,10 +145,13 @@ window.onclick = function(event) {
     else if(event.target == details){
         showMeThisClass(classArrayDetails, "left", "left");
     }
+    else if(event.target == home){
+        window.location.reload();    
+    }
 }// refresh the page
-document.getElementById('home').onclick = function (){
-    window.location.reload();
-}
+//document.getElementById('home').onclick = function (){
+//    window.location.reload();
+//}
 // Refresh (clear localStorage)
 document.getElementsByClassName('refresh_btn')[0].onclick = function (){
     localStorage.clear();
