@@ -174,6 +174,7 @@ let forgot_pwd = document.getElementById('forgot');
 
 // Get the modal
 var modal = document.getElementById('login_form');
+console.log(my_burger);
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
