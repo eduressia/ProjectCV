@@ -1,17 +1,18 @@
 //console.log("localStorage.user: " + JSON.stringify(localStorage.user);
-if (localStorage.getItem("user") === null){ //check if localStorage is null object //from https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists
-    // console.log("There is no \"user\" in localStorage");
-    //fetch api data
-    getRandomProfile();
-    //print User data into html (userObj) (function)
+window.onload = function (event) {
+    if (localStorage.getItem("user") === null) { //check if localStorage is null object //from https://stackoverflow.com/questions/16010827/html5-localstorage-checking-if-a-key-exists
+        // console.log("There is no \"user\" in localStorage");
+        //fetch api data
+        getRandomProfile();
+        //print User data into html (userObj) (function)
+    }
+    else {
+        //fetch localStore user
+        //print User data (localStorage)
+        setUserData(JSON.parse(localStorage.getItem("user")));
+        //    console.log("localStorage.getItem(\"user\"): " + JSON.parse(localStorage.getItem("user")));
+    }
 }
-else{
-    //fetch localStore user
-    //print User data (localStorage)
-    setUserData(JSON.parse(localStorage.getItem("user")));
-//    console.log("localStorage.getItem(\"user\"): " + JSON.parse(localStorage.getItem("user")));
-}
-
 //Partially from https://stackoverflow.com/questions/67369829/fetch-random-user-api
 function getRandomProfile() {
     fetch("https://randomuser.me/api/")
@@ -130,6 +131,7 @@ let details = document.getElementById('details');
 //document.getElementById('home').onclick = function (){
 //    window.location.reload();
 //}
+let my_home = document.getElementById('home');
 // Refresh (clear localStorage)
 //document.getElementsByClassName('refresh_btn')[0].onclick = function (){
 //    localStorage.clear();
@@ -167,7 +169,7 @@ let submit_my_form = document.getElementById('login_submit');
 // forgot pasword
 let forgot_pwd = document.getElementById('forgot');
 //document.getElementById('forgot').onclick = function (){
-    submit_form("forgot.php");
+//    submit_form("forgot.php");
 //}
 
 // Get the modal
@@ -189,7 +191,7 @@ window.onclick = function(event) {
     else if(event.target == details){
         showMeThisClass(classArrayDetails, "left", "left");
     }
-    else if(event.target == home){
+    else if(event.target == my_home){
         window.location.reload();    
     }
     else if(event.target == refresh_me){
