@@ -160,7 +160,7 @@ let close_menu = document.getElementById('close');
 //    showMeThisClass(["menu"], "burger", "burger");
 //}
 // submit form
-let submit_form = document.getElementById('login_submit');
+let submit_my_form = document.getElementById('login_submit');
 //document.getElementById('login_submit').onclick = function (){
 //    submit_form("submit.php");
 //}
@@ -209,7 +209,7 @@ window.onclick = function(event) {
     else if(event.target == close_menu){
         showMeThisClass(["menu"], "burger", "burger");
     }
-    else if(event.target == submit_form){
+    else if(event.target == submit_my_form){
         submit_form("submit.php");
     }
     else if(event.target == forgot_pwd){
