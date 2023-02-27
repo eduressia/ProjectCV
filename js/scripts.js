@@ -12,6 +12,35 @@ window.onload = function (event) {
         setUserData(JSON.parse(localStorage.getItem("user")));
         //    console.log("localStorage.getItem(\"user\"): " + JSON.parse(localStorage.getItem("user")));
     }
+    //anonymous functions (document.getElementById('work_experience').onclick = function(){...}) gives null comming from external link, moved to window.onclick
+    // hide everything inside classArray...
+    let classArrayWork = ["left", "about", "education", "hobby"];
+    let classArrayEducation = ["left", "about", "work", "hobby"];
+    let classArrayDetails = ["right"];
+    let classArrayburger = ["burger"];
+    // Hides everything but
+    let work_exp = document.getElementById('work_experience');
+    let educ = document.getElementById('education');
+    let details = document.getElementById('details');
+    // /Hides everything but
+    let my_home = document.getElementById('home');
+    // Refresh (clear localStorage)
+    let refresh_me = document.getElementsByClassName('refresh_btn')[0];
+    // login -> pops up login form
+    let login_me = document.getElementById('login');
+    // close modal
+    let close_modal = document.getElementsByClassName('close')[0];
+    // burger
+    let my_burger = document.getElementById('burger_button');
+    // close menu
+    let close_menu = document.getElementById('close');
+    // submit form
+    let submit_my_form = document.getElementById('login_submit');
+    // forgot pasword
+    let forgot_pwd = document.getElementById('forgot');
+    // Get the modal
+    let modal = document.getElementById('login_form');
+
 }
 //Partially from https://stackoverflow.com/questions/67369829/fetch-random-user-api
 function getRandomProfile() {
@@ -25,6 +54,48 @@ function getRandomProfile() {
             let userObj = data;
             setUserData(getRawData(userObj));
         });
+    window.onclick = function (event) {
+        if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
+            modal.style.display = "none";
+            document.getElementById('sorry').style.display = 'none';
+        }
+        if (event.target == work_exp) {
+            showMeThisClass(classArrayWork, "work", "right");
+        }
+        else if (event.target == educ) {
+            showMeThisClass(classArrayEducation, "education", "right");
+        }
+        else if (event.target == details) {
+            showMeThisClass(classArrayDetails, "left", "left");
+        }
+        else if (event.target == my_home) {
+            window.location.reload();
+        }
+        else if (event.target == refresh_me) {
+            localStorage.clear();
+            window.location.reload();
+        }
+        else if (event.target == login_me) {
+            document.getElementById('login_form').style.display = 'block';
+        }
+        else if (event.target == close_modal) {
+            document.getElementById('login_form').style.display = 'none';
+            document.getElementById('sorry').style.display = 'none';
+        }
+        else if (event.target == my_burger) {
+            showMeThisClass(classArrayburger, "menu", "menu");
+        }
+        else if (event.target == close_menu) {
+            showMeThisClass(["menu"], "burger", "burger");
+        }
+        else if (event.target == submit_my_form) {
+            submit_form("submit.php");
+        }
+        else if (event.target == forgot_pwd) {
+            submit_form("forgot.php");
+        }
+    }
+
 }
 function getRawData(userObj) {
     let newUserData = new Object();
@@ -107,76 +178,7 @@ function setUserData(newUserData) {
         }
     }
 }
-//anonymous functions (document.getElementById('work_experience').onclick = function(){...}) gives null comming from external link, moved to window.onclick
-// hide everything inside classArray...
-let classArrayWork = ["left", "about", "education", "hobby"];
-let classArrayEducation = ["left", "about", "work", "hobby"];
-let classArrayDetails = ["right"];
-let classArrayburger = ["burger"];
-// Hides everything but
-let work_exp = document.getElementById('work_experience');
-let educ = document.getElementById('education');
-let details = document.getElementById('details');
-// /Hides everything but
-let my_home = document.getElementById('home');
-// Refresh (clear localStorage)
-let refresh_me = document.getElementsByClassName('refresh_btn')[0];
-// login -> pops up login form
-let login_me = document.getElementById('login');
-// close modal
-let close_modal = document.getElementsByClassName('close')[0];
-// burger
-let my_burger = document.getElementById('burger_button');
-// close menu
-let close_menu = document.getElementById('close');
-// submit form
-let submit_my_form = document.getElementById('login_submit');
-// forgot pasword
-let forgot_pwd = document.getElementById('forgot');
-// Get the modal
-let modal = document.getElementById('login_form');
 
-window.onclick = function (event) {
-    if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
-        modal.style.display = "none";
-        document.getElementById('sorry').style.display = 'none';
-    }
-    if (event.target == work_exp) {
-        showMeThisClass(classArrayWork, "work", "right");
-    }
-    else if (event.target == educ) {
-        showMeThisClass(classArrayEducation, "education", "right");
-    }
-    else if (event.target == details) {
-        showMeThisClass(classArrayDetails, "left", "left");
-    }
-    else if (event.target == my_home) {
-        window.location.reload();
-    }
-    else if (event.target == refresh_me) {
-        localStorage.clear();
-        window.location.reload();
-    }
-    else if (event.target == login_me) {
-        document.getElementById('login_form').style.display = 'block';
-    }
-    else if (event.target == close_modal) {
-        document.getElementById('login_form').style.display = 'none';
-        document.getElementById('sorry').style.display = 'none';
-    }
-    else if (event.target == my_burger) {
-        showMeThisClass(classArrayburger, "menu", "menu");
-    }
-    else if (event.target == close_menu) {
-        showMeThisClass(["menu"], "burger", "burger");
-    }
-    else if (event.target == submit_my_form) {
-        submit_form("submit.php");
-    }
-    else if (event.target == forgot_pwd) {
-        submit_form("forgot.php");
-    }
-}
 // aux functions
 function submit_form(link) {
     // is any field empty?
