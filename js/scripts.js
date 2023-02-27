@@ -178,6 +178,7 @@ console.log(typeof my_burger);
 console.log(typeof modal);
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+    console.log(typeof my_burger + " 01");
     if (event.target == modal) {
         modal.style.display = "none";
         document.getElementById('sorry').style.display='none';
@@ -208,6 +209,7 @@ window.onclick = function(event) {
     }    
     else if(event.target == my_burger){
         showMeThisClass(classArrayburger, "menu", "menu");
+        console.log(typeof my_burger + " 02");
     }
     else if(event.target == close_menu){
         showMeThisClass(["menu"], "burger", "burger");
