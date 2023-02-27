@@ -126,6 +126,50 @@ let educ = document.getElementById('education');
 //    showMeThisClass(classArrayDetails, "left", "left");
 //}
 let details = document.getElementById('details');
+// refresh the page
+//document.getElementById('home').onclick = function (){
+//    window.location.reload();
+//}
+// Refresh (clear localStorage)
+//document.getElementsByClassName('refresh_btn')[0].onclick = function (){
+//    localStorage.clear();
+//    window.location.reload();
+//}
+let refresh_me = document.getElementsByClassName('refresh_btn')[0];
+// login -> pops up login form
+//document.getElementById('login').onclick = function (){
+//    document.getElementById('login_form').style.display='block';
+//}
+let login_me = document.getElementById('login');
+
+// close modal
+let close_modal = document.getElementsByClassName('close')[0];
+//document.getElementsByClassName('close')[0].onclick = function (){
+//    document.getElementById('login_form').style.display='none';
+//    document.getElementById('sorry').style.display='none';
+//}
+
+// burger
+let my_burger = document.getElementById('burger_button');
+//document.getElementById('burger_button').onclick = function (){
+//    showMeThisClass(classArrayburger, "menu", "menu");
+//}
+// close menu
+let close_menu = document.getElementById('close');
+//document.getElementById('close').onclick = function (){
+//    showMeThisClass(["menu"], "burger", "burger");
+//}
+// submit form
+let submit_form = document.getElementById('login_submit');
+//document.getElementById('login_submit').onclick = function (){
+//    submit_form("submit.php");
+//}
+// forgot pasword
+let forgot_pwd = document.getElementById('forgot');
+//document.getElementById('forgot').onclick = function (){
+    submit_form("forgot.php");
+//}
+
 // Get the modal
 var modal = document.getElementById('login_form');
 
@@ -148,40 +192,29 @@ window.onclick = function(event) {
     else if(event.target == home){
         window.location.reload();    
     }
-}// refresh the page
-//document.getElementById('home').onclick = function (){
-//    window.location.reload();
-//}
-// Refresh (clear localStorage)
-document.getElementsByClassName('refresh_btn')[0].onclick = function (){
-    localStorage.clear();
-    window.location.reload();
-}
-// login -> pops up login form
-document.getElementById('login').onclick = function (){
-    document.getElementById('login_form').style.display='block';
-}
-// close modal
-document.getElementsByClassName('close')[0].onclick = function (){
-    document.getElementById('login_form').style.display='none';
-    document.getElementById('sorry').style.display='none';
-}
-
-// burger
-document.getElementById('burger_button').onclick = function (){
-    showMeThisClass(classArrayburger, "menu", "menu");
-}
-// close menu
-document.getElementById('close').onclick = function (){
-    showMeThisClass(["menu"], "burger", "burger");
-}
-// submit form
-document.getElementById('login_submit').onclick = function (){
-    submit_form("submit.php");
-}
-// forgot pasword
-document.getElementById('forgot').onclick = function (){
-    submit_form("forgot.php");
+    else if(event.target == refresh_me){
+        localStorage.clear();
+        window.location.reload();
+    }
+    else if(event.target == login_me){
+        document.getElementById('login_form').style.display='block';
+    }    
+    else if(event.target == close_modal){
+        document.getElementById('login_form').style.display='none';
+        document.getElementById('sorry').style.display='none';
+    }    
+    else if(event.target == my_burger){
+        showMeThisClass(classArrayburger, "menu", "menu");
+    }
+    else if(event.target == close_menu){
+        showMeThisClass(["menu"], "burger", "burger");
+    }
+    else if(event.target == submit_form){
+        submit_form("submit.php");
+    }
+    else if(event.target == forgot_pwd){
+        submit_form("forgot.php");
+    }
 }
 // aux functions
 function submit_form(link) {
