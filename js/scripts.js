@@ -112,17 +112,20 @@ let classArrayWork = ["left","about","education","hobby"];
 let classArrayEducation = ["left","about","work","hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
-document.getElementById('work_experience').onclick = function(){
-    showMeThisClass(classArrayWork, "work", "right");
-}
+//document.getElementById('work_experience').onclick = function(){ //null comming from external link, moved to window.onclick
+//    showMeThisClass(classArrayWork, "work", "right"); 
+//}
+let work_exp = document.getElementById('work_experience');
 // hide everything but education
-document.getElementById('education').onclick = function (){
-    showMeThisClass(classArrayEducation, "education", "right");
-}
+//document.getElementById('education').onclick = function (){
+//    showMeThisClass(classArrayEducation, "education", "right");
+//}
+let educ = document.getElementById('education');
 // hide everything but details
-document.getElementById('details').onclick = function(){
-    showMeThisClass(classArrayDetails, "left", "left");
-}
+//document.getElementById('details').onclick = function(){
+//    showMeThisClass(classArrayDetails, "left", "left");
+//}
+let details = document.getElementById('details');
 // Get the modal
 var modal = document.getElementById('login_form');
 
@@ -131,6 +134,16 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         document.getElementById('sorry').style.display='none';
+    }
+    // Hides everything but
+    if (event.target == work_exp) {
+        showMeThisClass(classArrayWork, "work", "right");
+    }
+    elseif(event.target == educ){
+        showMeThisClass(classArrayEducation, "education", "right");
+    }
+    elseif(event.target == details){
+        showMeThisClass(classArrayDetails, "left", "left");
     }
 }// refresh the page
 document.getElementById('home').onclick = function (){
