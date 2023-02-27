@@ -160,7 +160,7 @@ let close_menu = document.getElementById('close');
 //    showMeThisClass(["menu"], "burger", "burger");
 //}
 // submit form
-let submit_my_form = document.getElementById('login_submit');
+let submit_my_form = document.getElementById('login_submit'); 
 //document.getElementById('login_submit').onclick = function (){
 //    submit_form("submit.php");
 //}
