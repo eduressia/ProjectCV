@@ -165,7 +165,6 @@ window.addEventListener("click", function (event) {
     }
     else if (event.target == my_burger) {
         showMeThisClass(classArrayburger, "menu", "menu");
-        console.log(typeof my_burger + " 02");
     }
     else if (event.target == close_menu) {
         showMeThisClass(["menu"], "burger", "burger");
