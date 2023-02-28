@@ -5,7 +5,6 @@ window.onload = function (event) {
         //fetch api data
         getRandomProfile();
         //print User data into html (userObj) (function)
-        window.location.reload();
     }
     else {
         //fetch localStore user
