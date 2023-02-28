@@ -160,7 +160,7 @@ window.addEventListener("click", function (event) {
     else if (event.target.id === "login") {
         document.getElementById('login_form').style.display = 'block';
     }
-    else if (event.targetclassName[0] === "close") {
+    else if (event.target.className[0] === "close") {
         document.getElementById('login_form').style.display = 'none';
         document.getElementById('sorry').style.display = 'none';
     }
