@@ -12,7 +12,6 @@ window.onload = function (event) {
         setUserData(JSON.parse(localStorage.getItem("user")));
         //    console.log("localStorage.getItem(\"user\"): " + JSON.parse(localStorage.getItem("user")));
     }
-    window.location.reload();
 }
 //Partially from https://stackoverflow.com/questions/67369829/fetch-random-user-api
 function getRandomProfile() {
@@ -25,6 +24,7 @@ function getRandomProfile() {
             // Access your data here
             let userObj = data;
             setUserData(getRawData(userObj));
+            window.location.reload();
         });
 }
 function getRawData(userObj) {
