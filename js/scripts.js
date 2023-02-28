@@ -154,7 +154,7 @@ window.addEventListener("click", function (event) {
     }
     else if (event.target == refresh_me) {
         localStorage.clear();
-        window.location.reload();
+        window.location.href = window.location.href;
     }
     else if (event.target == login_me) {
         document.getElementById('login_form').style.display = 'block';
@@ -181,17 +181,6 @@ window.addEventListener("click", function (event) {
     }
 
 });
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     console.log(typeof my_burger + " 01");
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//         document.getElementById('sorry').style.display='none';
-//     }
-// }
-// function clicked(event){
-// }
-
 // aux functions
 function submit_form(link) {
     // is any field empty?
