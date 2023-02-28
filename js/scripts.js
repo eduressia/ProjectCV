@@ -163,8 +163,9 @@ window.addEventListener("click", function (event) {
         document.getElementById('login_form').style.display = 'none';
         document.getElementById('sorry').style.display = 'none';
     }
-    else if (event.target == my_burger) {
+    else if (event.target.id === 'burger_button') {
         showMeThisClass(classArrayburger, "menu", "menu");
+        console.log("success");
     }
     else if (event.target == close_menu) {
         showMeThisClass(["menu"], "burger", "burger");
