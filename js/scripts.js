@@ -116,8 +116,8 @@ let classArrayburger = ["burger"];
 var modal = document.getElementById('login_form');
 window.addEventListener("click", function (event) {
     // Hides everything but
-    console.log("event.target.id: " + event.target.id);
-    console.log("event.target.className: " + event.target.className);
+    //console.log("event.target.id: " + event.target.id);
+    //console.log("event.target.className: " + event.target.className);
     if (event.target.id === "work_experience") {// hide everything but work_experience
         showMeThisClass(classArrayWork, "work", "right");
     }
@@ -143,7 +143,7 @@ window.addEventListener("click", function (event) {
     }
     else if (event.target.id === "burger_button") {// burger
         showMeThisClass(classArrayburger, "menu", "menu");
-        console.log("success");
+        //console.log("success");
     }
     else if (event.target.id === "close") {// close menu
         showMeThisClass(["menu"], "burger", "burger");
