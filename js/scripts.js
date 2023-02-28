@@ -114,69 +114,70 @@ let classArrayEducation = ["left", "about", "work", "hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
 //document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.addEventListener()
-let work_exp = document.getElementById('work_experience');
+//let work_exp = document.getElementById('work_experience');
 // hide everything but education
-let educ = document.getElementById('education');
+//et educ = document.getElementById('education');
 // hide everything but details
-let details = document.getElementById('details');
+//let details = document.getElementById('details');
 // refresh the page
-let my_home = document.getElementById('home');
+//let my_home = document.getElementById('home');
 // Refresh (clear localStorage)
-let refresh_me = document.getElementsByClassName('refresh_btn')[0];
+//let refresh_me = document.getElementsByClassName('refresh_btn')[0];
 // login -> pops up login form
-let login_me = document.getElementById('login');
+//let login_me = document.getElementById('login');
 // close modal
-let close_modal = document.getElementsByClassName('close')[0];
+//let close_modal = document.getElementsByClassName('close')[0];
 // burger
-let my_burger = document.getElementById('burger_button');
+//let my_burger = document.getElementById('burger_button');
 // close menu
-let close_menu = document.getElementById('close');
+//let close_menu = document.getElementById('close');
 // submit form
-let submit_my_form = document.getElementById('login_submit');
+//let submit_my_form = document.getElementById('login_submit');
 // forgot pasword
-let forgot_pwd = document.getElementById('forgot');
+//let forgot_pwd = document.getElementById('forgot');
 // Get the modal
 var modal = document.getElementById('login_form');
 window.addEventListener("click", function (event) {
     // Hides everything but
     console.log("event.target.id: " + event.target.id);
-    if (event.target == work_exp) {
+    console.log("event.target.className[0]: " + event.target.className[0]);
+    if (event.target.id === "work_experience") {
         showMeThisClass(classArrayWork, "work", "right");
     }
-    else if (event.target == educ) {
+    else if (event.target.id === "education") {
         showMeThisClass(classArrayEducation, "education", "right");
     }
-    else if (event.target == details) {
+    else if (event.target.id === "details") {
         showMeThisClass(classArrayDetails, "left", "left");
     }
-    else if (event.target == my_home) {
+    else if (event.target.id === "home") {
         window.location.reload();
     }
-    else if (event.target == refresh_me) {
+    else if (event.target.className[0] === "refresh_btn") {
         localStorage.clear();
         window.location.href = window.location.href;
     }
-    else if (event.target == login_me) {
+    else if (event.target.id === "login") {
         document.getElementById('login_form').style.display = 'block';
     }
-    else if (event.target == close_modal) {
+    else if (event.targetclassName[0] === "close") {
         document.getElementById('login_form').style.display = 'none';
         document.getElementById('sorry').style.display = 'none';
     }
-    else if (event.target.id === 'burger_button') {
+    else if (event.target.id === "burger_button") {
         showMeThisClass(classArrayburger, "menu", "menu");
         console.log("success");
     }
-    else if (event.target == close_menu) {
+    else if (event.target.id === "close") {
         showMeThisClass(["menu"], "burger", "burger");
     }
-    else if (event.target == submit_my_form) {
+    else if (event.target.id === "login_submit") {
         submit_form("submit.php");
     }
-    else if (event.target == forgot_pwd) {
+    else if (event.target.id === "forgot") {
         submit_form("forgot.php");
     }
-    else if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
+    else if (event.target.id === "login_form") {// When the user clicks anywhere outside of the modal, close it
         modal.style.display = "none";
         document.getElementById('sorry').style.display = 'none';
     }
