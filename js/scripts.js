@@ -176,6 +176,47 @@ let forgot_pwd = document.getElementById('forgot');
 var modal = document.getElementById('login_form');
 console.log(typeof my_burger);
 console.log(typeof modal);
+
+window.addEventListener("click", function(event){
+// Hides everything but
+if (event.target == work_exp){
+    showMeThisClass(classArrayWork, "work", "right");
+}
+else if(event.target == educ){
+    showMeThisClass(classArrayEducation, "education", "right");
+}
+else if(event.target == details){
+    showMeThisClass(classArrayDetails, "left", "left");
+}
+else if(event.target == my_home){
+    window.location.reload();    
+}
+else if(event.target == refresh_me){
+    localStorage.clear();
+    window.location.reload();
+}
+else if(event.target == login_me){
+    document.getElementById('login_form').style.display='block';
+}    
+else if(event.target == close_modal){
+    document.getElementById('login_form').style.display='none';
+    document.getElementById('sorry').style.display='none';
+}    
+else if(event.target == my_burger){
+    showMeThisClass(classArrayburger, "menu", "menu");
+    console.log(typeof my_burger + " 02");
+}
+else if(event.target == close_menu){
+    showMeThisClass(["menu"], "burger", "burger");
+}
+else if(event.target == submit_my_form){
+    submit_form("submit.php");
+}
+else if(event.target == forgot_pwd){
+    submit_form("forgot.php");
+}
+
+});
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     console.log(typeof my_burger + " 01");
@@ -183,44 +224,10 @@ window.onclick = function(event) {
         modal.style.display = "none";
         document.getElementById('sorry').style.display='none';
     }
-    // Hides everything but
-    if (event.target == work_exp) {
-        showMeThisClass(classArrayWork, "work", "right");
-    }
-    else if(event.target == educ){
-        showMeThisClass(classArrayEducation, "education", "right");
-    }
-    else if(event.target == details){
-        showMeThisClass(classArrayDetails, "left", "left");
-    }
-    else if(event.target == my_home){
-        window.location.reload();    
-    }
-    else if(event.target == refresh_me){
-        localStorage.clear();
-        window.location.reload();
-    }
-    else if(event.target == login_me){
-        document.getElementById('login_form').style.display='block';
-    }    
-    else if(event.target == close_modal){
-        document.getElementById('login_form').style.display='none';
-        document.getElementById('sorry').style.display='none';
-    }    
-    else if(event.target == my_burger){
-        showMeThisClass(classArrayburger, "menu", "menu");
-        console.log(typeof my_burger + " 02");
-    }
-    else if(event.target == close_menu){
-        showMeThisClass(["menu"], "burger", "burger");
-    }
-    else if(event.target == submit_my_form){
-        submit_form("submit.php");
-    }
-    else if(event.target == forgot_pwd){
-        submit_form("forgot.php");
-    }
 }
+function clicked(event){
+}
+
 // aux functions
 function submit_form(link) {
     // is any field empty?
