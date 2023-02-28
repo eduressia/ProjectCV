@@ -107,74 +107,51 @@ function setUserData(newUserData) {
         }
     }
 }
-//anonymous Functions didn't work moved to window.onclick
 // hide everything inside classArray...
 let classArrayWork = ["left", "about", "education", "hobby"];
 let classArrayEducation = ["left", "about", "work", "hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
-//document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.addEventListener()
-//let work_exp = document.getElementById('work_experience');
-// hide everything but education
-//et educ = document.getElementById('education');
-// hide everything but details
-//let details = document.getElementById('details');
-// refresh the page
-//let my_home = document.getElementById('home');
-// Refresh (clear localStorage)
-//let refresh_me = document.getElementsByClassName('refresh_btn')[0];
-// login -> pops up login form
-//let login_me = document.getElementById('login');
-// close modal
-//let close_modal = document.getElementsByClassName('close')[0];
-// burger
-//let my_burger = document.getElementById('burger_button');
-// close menu
-//let close_menu = document.getElementById('close');
-// submit form
-//let submit_my_form = document.getElementById('login_submit');
-// forgot pasword
-//let forgot_pwd = document.getElementById('forgot');
 // Get the modal
 var modal = document.getElementById('login_form');
 window.addEventListener("click", function (event) {
     // Hides everything but
     console.log("event.target.id: " + event.target.id);
     console.log("event.target.className: " + event.target.className);
-    if (event.target.id === "work_experience") {
+    if (event.target.id === "work_experience") {// hide everything but work_experience
         showMeThisClass(classArrayWork, "work", "right");
     }
-    else if (event.target.id === "education") {
+    else if (event.target.id === "education") {// hide everything but education
         showMeThisClass(classArrayEducation, "education", "right");
     }
-    else if (event.target.id === "details") {
+    else if (event.target.id === "details") {// hide everything but details
         showMeThisClass(classArrayDetails, "left", "left");
     }
-    else if (event.target.id === "home") {
+    else if (event.target.id === "home") {// refresh the page
         window.location.reload();
     }
-    else if (event.target.className === "refresh_btn") {
+    else if (event.target.className === "refresh_btn") {// Refresh (clear localStorage)
         localStorage.clear();
         window.location.href = window.location.href;
     }
-    else if (event.target.id === "login") {
+    else if (event.target.id === "login") {// login -> pops up login form
         document.getElementById('login_form').style.display = 'block';
     }
-    else if (event.target.className === "close") {
+    else if (event.target.className === "close") {// close modal
         document.getElementById('login_form').style.display = 'none';
         document.getElementById('sorry').style.display = 'none';
     }
-    else if (event.target.id === "burger_button") {
+    else if (event.target.id === "burger_button") {// burger
         showMeThisClass(classArrayburger, "menu", "menu");
         console.log("success");
     }
-    else if (event.target.id === "close") {
+    else if (event.target.id === "close") {// close menu
         showMeThisClass(["menu"], "burger", "burger");
     }
-    else if (event.target.id === "login_submit") {
+    else if (event.target.id === "login_submit") {// submit form
         submit_form("submit.php");
     }
-    else if (event.target.id === "forgot") {
+    else if (event.target.id === "forgot") {// forgot pasword
         submit_form("forgot.php");
     }
     else if (event.target.id === "login_form") {// When the user clicks anywhere outside of the modal, close it
