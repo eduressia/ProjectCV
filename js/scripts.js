@@ -216,6 +216,7 @@ window.addEventListener("click", function (event) {
         submit_form("forgot.php");
     }
     else if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
+        console.log(typeof modal + " modal 01");
         modal.style.display = "none";
         document.getElementById('sorry').style.display = 'none';
     }
