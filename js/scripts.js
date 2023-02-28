@@ -12,6 +12,7 @@ window.onload = function (event) {
         setUserData(JSON.parse(localStorage.getItem("user")));
         //    console.log("localStorage.getItem(\"user\"): " + JSON.parse(localStorage.getItem("user")));
     }
+    window.location.reload();
 }
 //Partially from https://stackoverflow.com/questions/67369829/fetch-random-user-api
 function getRandomProfile() {
@@ -113,70 +114,30 @@ let classArrayWork = ["left", "about", "education", "hobby"];
 let classArrayEducation = ["left", "about", "work", "hobby"];
 let classArrayDetails = ["right"];
 let classArrayburger = ["burger"];
-//document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.onclick
-//    showMeThisClass(classArrayWork, "work", "right"); 
-//}
+//document.getElementById('work_experience').onclick = function(){ //gives null comming from external link, moved to window.addEventListener()
 let work_exp = document.getElementById('work_experience');
 // hide everything but education
-//document.getElementById('education').onclick = function (){
-//    showMeThisClass(classArrayEducation, "education", "right");
-//}
 let educ = document.getElementById('education');
 // hide everything but details
-//document.getElementById('details').onclick = function(){
-//    showMeThisClass(classArrayDetails, "left", "left");
-//}
 let details = document.getElementById('details');
 // refresh the page
-//document.getElementById('home').onclick = function (){
-//    window.location.reload();
-//}
 let my_home = document.getElementById('home');
 // Refresh (clear localStorage)
-//document.getElementsByClassName('refresh_btn')[0].onclick = function (){
-//    localStorage.clear();
-//    window.location.reload();
-//}
 let refresh_me = document.getElementsByClassName('refresh_btn')[0];
 // login -> pops up login form
-//document.getElementById('login').onclick = function (){
-//    document.getElementById('login_form').style.display='block';
-//}
 let login_me = document.getElementById('login');
-
 // close modal
 let close_modal = document.getElementsByClassName('close')[0];
-//document.getElementsByClassName('close')[0].onclick = function (){
-//    document.getElementById('login_form').style.display='none';
-//    document.getElementById('sorry').style.display='none';
-//}
-
 // burger
 let my_burger = document.getElementById('burger_button');
-//document.getElementById('burger_button').onclick = function (){
-//    showMeThisClass(classArrayburger, "menu", "menu");
-//}
 // close menu
 let close_menu = document.getElementById('close');
-//document.getElementById('close').onclick = function (){
-//    showMeThisClass(["menu"], "burger", "burger");
-//}
 // submit form
 let submit_my_form = document.getElementById('login_submit');
-//document.getElementById('login_submit').onclick = function (){
-//    submit_form("submit.php");
-//}
 // forgot pasword
 let forgot_pwd = document.getElementById('forgot');
-//document.getElementById('forgot').onclick = function (){
-//    submit_form("forgot.php");
-//}
-
 // Get the modal
 var modal = document.getElementById('login_form');
-console.log(typeof my_burger);
-console.log(typeof modal);
-
 window.addEventListener("click", function (event) {
     // Hides everything but
     if (event.target == work_exp) {
@@ -216,7 +177,6 @@ window.addEventListener("click", function (event) {
         submit_form("forgot.php");
     }
     else if (event.target == modal) {// When the user clicks anywhere outside of the modal, close it
-        console.log(typeof modal + " modal 01");
         modal.style.display = "none";
         document.getElementById('sorry').style.display = 'none';
     }
