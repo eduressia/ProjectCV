@@ -140,7 +140,7 @@ var modal = document.getElementById('login_form');
 window.addEventListener("click", function (event) {
     // Hides everything but
     console.log("event.target.id: " + event.target.id);
-    console.log("event.target.className[0]: " + event.target.className[0]);
+    console.log("event.target.className: " + event.target.className);
     if (event.target.id === "work_experience") {
         showMeThisClass(classArrayWork, "work", "right");
     }
@@ -153,14 +153,14 @@ window.addEventListener("click", function (event) {
     else if (event.target.id === "home") {
         window.location.reload();
     }
-    else if (event.target.className[0] === "refresh_btn") {
+    else if (event.target.className === "refresh_btn") {
         localStorage.clear();
         window.location.href = window.location.href;
     }
     else if (event.target.id === "login") {
         document.getElementById('login_form').style.display = 'block';
     }
-    else if (event.target.className[0] === "close") {
+    else if (event.target.className === "close") {
         document.getElementById('login_form').style.display = 'none';
         document.getElementById('sorry').style.display = 'none';
     }
