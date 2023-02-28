@@ -139,7 +139,7 @@ let forgot_pwd = document.getElementById('forgot');
 var modal = document.getElementById('login_form');
 window.addEventListener("click", function (event) {
     // Hides everything but
-    console.log("Object.values(event.target): " + Object.values(event));
+    console.log("event.target.id: " + event.target.id);
     if (event.target == work_exp) {
         showMeThisClass(classArrayWork, "work", "right");
     }
